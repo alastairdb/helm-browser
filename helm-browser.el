@@ -140,7 +140,8 @@ available via wmctrl."
       (if (or (string-match "wmclass...Navigator.firefox.+title...\\(.+\\)[[:space:]]—[[:space:]]" sitem) ; note firefox uses a special separator
               (string-match "wmclass...brave-browser.Brave-browser.+title...\\(.+\\)[[:space:]]-[[:space:]]" sitem)
               (string-match "wmclass...chromium-browser.Chromium-browser.+title...\\(.+\\)[[:space:]]-[[:space:]]" sitem)
-              (string-match "wmclass...chrome-browser.Chrome-browser.+title...\\(.+\\)[[:space:]]-[[:space:]]" sitem))
+              (string-match "wmclass...chrome-browser.Chrome-browser.+title...\\(.+\\)[[:space:]]-[[:space:]]" sitem)
+              (string-match "wmclass...google-chrome.Google-chrome.+title...\\(.+\\)[[:space:]]-[[:space:]]" sitem))
           (setq win-title (match-string 1 sitem))
         (setq win-title nil))
       (if (string-match "wmclass...Navigator.firefox.+\\(https?://[^[:space:]]+\\)" sitem)
